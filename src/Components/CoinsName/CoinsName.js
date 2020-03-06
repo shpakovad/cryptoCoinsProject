@@ -50,7 +50,6 @@ class CoinsName extends Component {
                     <Redirect to="/not_found"/>
                 </Switch>
                 :
-
                 <div className={style.coinsName}>
                     {!this.props.coin && <img className={style.preloader} src={preloader} alt=""/>}
 

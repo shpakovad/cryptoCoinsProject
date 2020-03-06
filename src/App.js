@@ -68,8 +68,6 @@ class App extends Component {
         </div>
         </div>
 
-
-
         );
     }
 }
@@ -103,73 +101,3 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
-
-
-{/*<div className="App">
-                <Switch>
-                <div className={'wrapper'}>
-                    <Route exact path='/' render={() => <Main coins={currentData} sortCoins={this.sortCoins}
-                                                              sorted={sorted}/>}
-                    />
-                    <Route path='/details/:id' render={() => <CoinsName/>}/>
-                </div>
-                <div className='wrapperPaginator'>
-                    <Route exact path='/'
-                           render={() => <Pagination dataPerPage={this.props.dataPerPage} coins={currentData}
-                                                     totalData={this.props.coins.length} paginate={this.paginate}/>}
-                    />
-                </div>
-                <Route path="/not_found" component={NotFound}/>
-                <Redirect  to="/not_found" />
-
-                    <Route path="/404" component={NotFound} />
-                    <Redirect to="/404" />
-                </Switch>
-            </div>*/}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/*<div className="App">*/}
-
-{/*    <div className={'wrapper'}>*/}
-{/*        <Route exact path='/' render={() => <Main coins={currentData} sortCoins={this.sortCoins}*/}
-{/*                                                  sorted={sorted}/>}*/}
-{/*        />*/}
-{/*        <Route path='/details/:id' render={() => <CoinsName/>}/>*/}
-{/*    </div>*/}
-{/*    <div className='wrapperPaginator'>*/}
-{/*        <Route exact path='/'*/}
-{/*               render={() => <Pagination dataPerPage={this.props.dataPerPage} coins={currentData}*/}
-{/*                                         totalData={this.props.coins.length} paginate={this.paginate}/>}*/}
-{/*        />*/}
-{/*    </div>*/}
-
-{/*</div>*/}
