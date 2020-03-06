@@ -1,0 +1,15 @@
+.paginator {
+    line-height: 50px;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.paginator a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover {
+    color: red;
+}

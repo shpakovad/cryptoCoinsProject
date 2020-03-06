@@ -1,0 +1,28 @@
+.titleCurrency {
+    color: #50ffff;
+    font-weight: 700;
+    padding-top: 40px;
+}
+.converter {
+    width: 600px;
+    height: 100px;
+    margin: 40px auto;
+}
+.nameSpan {
+    padding-right: 10px;
+    font-weight: 500;
+    color: white
+}
+.inputChange {
+    margin-bottom: 20px;
+}
+.arrowsChange {
+    width: 20px;
+}
+.swapRight {
+    margin-top: 10px;
+}
+
+.swapLeft {
+    margin-top: -6px;
+}

@@ -1,0 +1,17 @@
+.wrapperParcentage {
+    margin-top: 50px;
+}
+
+.changes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.percentageChange {
+    width: 10%;
+    height: 40px;
+    border: 1px solid grey;
+    color: white;
+    font-weight: 500;
+}

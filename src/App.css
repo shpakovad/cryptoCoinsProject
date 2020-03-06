@@ -1,0 +1,19 @@
+.App {
+    text-align: center;
+
+}
+
+.wrapperPaginator {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: black;
+}
+
+body {
+    height: 100%;
+    background: #2e2d2d;
+}
+
+
+
