@@ -65,7 +65,6 @@ class CoinsName extends Component {
                                 : {this.props.coin.genesis_date}  </div>}
 
                         <Table coin={this.props.coin}/>
-
                         <Currency {...this.props} name={this.props.coin.name}
                                   handleInputCoin={this.handleInputCoin}
                                   handleInputUsd={this.handleInputUsd}
@@ -75,7 +74,8 @@ class CoinsName extends Component {
                         <Chart coin={this.props.coin}/>
                     </>}
                 </div>
-            }</>
+             }</>
+
 
         );
     }

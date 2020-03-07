@@ -58,7 +58,7 @@ class App extends Component {
                 <Route exact path="/" render={() => <Main coins={currentData} sortCoins={this.sortCoins}
                                                     sorted={sorted}/>}/>
                 <Route path="/details/:id?" render={() => <CoinsName/>}/>
-                <Route path="/not_found" component={NotFound} />
+                <Route path="*" component={NotFound} />
                 <Redirect to="/not_found" />
             </Switch>
                 <Route exact path='/'

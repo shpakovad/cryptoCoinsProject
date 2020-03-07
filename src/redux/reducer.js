@@ -122,7 +122,6 @@ export const addUniqueCoinTh = (id) => {
             }))
             .catch(err => {
                 dispatch(notFoundAC());
-                console.log(err)
             })
     }
 };
