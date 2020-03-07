@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import style from './Pagination.module.css'
-import { NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 
 class Pagination extends Component {
@@ -12,13 +12,13 @@ class Pagination extends Component {
             pageNumbers.push(i)
         }
         return (
-            <div className={style.paginator}  >
+            <div className={style.paginator}>
                 {pageNumbers.map((number) => {
-                    return <NavLink  key={number.toString()}
-                              onClick={() => {
-                                  this.props.paginate(number)
-                              }}
-                               to='/'  >
+                    return <NavLink key={number.toString()}
+                                    onClick={() => {
+                                        this.props.paginate(number)
+                                    }}
+                                    to='/'>
                         {number}
                     </NavLink>
                 })

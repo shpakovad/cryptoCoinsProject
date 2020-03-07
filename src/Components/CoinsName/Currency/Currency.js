@@ -12,18 +12,18 @@ const Currency = (props) => {
             <div className={style.converter}>
                 <span className={style.nameSpan}>{props.name} </span>
                 {props.disabledUsd ? <>
-                        <input type='number' disabled={props.disabledCoin}
+                        <input type="number" disabled={props.disabledCoin}
                                onChange={props.handleInputCoin}/>
                         <span className={style.nameSpan}>USD</span>
-                        <input className={style.inputChange} type='number' disabled={props.disabledUsd}
+                        <input className={style.inputChange} type="number" disabled={props.disabledUsd}
                                value={props.amountUsd}/>
                     </> :
                     <>
-                        <input className={style.inputChange} type='number'
+                        <input className={style.inputChange} type="number"
                                disabled={props.disabledCoin}
                                value={props.amountCoin}/>
                         <span className={style.nameSpan}>USD</span>
-                        <input type='number' disabled={props.disabledUsd}
+                        <input type="number" disabled={props.disabledUsd}
                                onChange={props.handleInputUsd}/>
                     </>
                 }

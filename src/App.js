@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import './App.css';
+import React, {Component} from "react";
+import "./App.css";
 import Main from "./Components/Main/Main";
 import CoinsName from "./Components/CoinsName/CoinsName";
 import {Redirect, Route, Switch} from "react-router-dom";
@@ -35,38 +35,39 @@ class App extends Component {
         const currentData = this.props.coins.slice(indexOfFirstData, indexOfLastData);
 
         let sorted = currentData.sort((a, b) => {
-            let isReversed = this.props.sortType === 'asc' ? 1 : -1;
+            let isReversed = this.props.sortType === "asc" ? 1 : -1;
 
             switch (this.props.value) {
-                case 'coin' :
+                case "coin" :
                     return isReversed * a.name.localeCompare(b.name);
-                case 'price' :
+                case "price" :
                     return isReversed * (a.current_price - b.current_price);
-                case 'change1' :
+                case "change1" :
                     return isReversed * (a.price_change_percentage_1h_in_currency - b.price_change_percentage_1h_in_currency);
-                case 'change24' :
+                case "change24" :
                     return isReversed * (a.price_change_percentage_24h_in_currency - b.price_change_percentage_24h_in_currency);
-                case 'changeWeek' :
+                case "changeWeek" :
                     return isReversed * (a.price_change_percentage_7d_in_currency - b.price_change_percentage_7d_in_currency);
             }
         });
 
         return (
             <div className="App">
-            <div className={'wrapper'}>
-            <Switch>
-                <Route exact path="/" render={() => <Main coins={currentData} sortCoins={this.sortCoins}
-                                                    sorted={sorted}/>}/>
-                <Route path="/details/:id?" render={() => <CoinsName/>}/>
-                <Route path="*" component={NotFound} />
-                <Redirect to="/not_found" />
-            </Switch>
-                <Route exact path='/'
-                       render={() =>     <div className='wrapperPaginator'> <Pagination dataPerPage={this.props.dataPerPage} coins={currentData}
-                                                                                        totalData={this.props.coins.length} paginate={this.paginate}/> </div>}
-                />
-        </div>
-        </div>
+                <div className={"wrapper"}>
+                    <Switch>
+                        <Route exact path="/" render={() => <Main coins={currentData} sortCoins={this.sortCoins}
+                                                                  sorted={sorted}/>}/>
+                        <Route path="/details/:id?" render={() => <CoinsName/>}/>
+                        <Route path="*" component={NotFound}/>
+                        <Redirect to="/not_found"/>
+                    </Switch>
+                    <Route exact path='/'
+                           render={() => <div className="wrapperPaginator">
+                               <Pagination  dataPerPage={this.props.dataPerPage} coins={currentData}
+                               totalData={this.props.coins.length} paginate={this.paginate}/></div>}
+                    />
+                </div>
+            </div>
 
         );
     }

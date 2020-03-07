@@ -5,6 +5,7 @@ import style from "./Table.module.css";
 const Table = (props) => {
 
     return (
+
         <div className={style.wrapperParcentage}>
             <div className={style.changes}>
                 <div className={style.percentageChange}> 1h</div>

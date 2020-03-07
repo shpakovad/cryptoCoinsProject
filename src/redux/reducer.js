@@ -1,22 +1,22 @@
 import {api} from "../api/api";
 
-export const ADD_COINS = 'ADD-COINS';
-export const SORT_COINS = 'SORT-COINS';
-export const ADD_COIN = 'ADD-COIN';
-export const CHANGE_INPUT_COIN = 'CHANGE-INPUT-COIN';
-export const CHANGE_INPUT_USD = 'CHANGE-INPUT-USD';
-export const CHANGE_ACTIVITY_INPUT = 'CHANGE-ACTIVITY-INPUT';
-export const PAGINATE = 'PAGINATE';
-export const  NOT_FOUND = ' NOT_FOUND';
+export const ADD_COINS = "ADD-COINS";
+export const SORT_COINS = "SORT-COINS";
+export const ADD_COIN = "ADD-COIN";
+export const CHANGE_INPUT_COIN = "CHANGE-INPUT-COIN";
+export const CHANGE_INPUT_USD = "CHANGE-INPUT-USD";
+export const CHANGE_ACTIVITY_INPUT = "CHANGE-ACTIVITY-INPUT";
+export const PAGINATE = "PAGINATE";
+export const NOT_FOUND = "NOT_FOUND";
 
 
 const initialState = {
     coins: [],
-    sortType: 'asc',
-    value: '',
+    sortType: "asc",
+    value: "",
     coin: null,
-    amountUsd: '',
-    amountCoin: '',
+    amountUsd: "",
+    amountCoin: "",
     disabledUsd: true,
     disabledCoin: false,
     currentPage: 1,
@@ -65,10 +65,11 @@ const reducer = (state = initialState, action) => {
                 currentPage: action.currentPage
             };
 
-            case  NOT_FOUND:
+        case  NOT_FOUND:
             return {
                 ...state,
-                error: true            };
+                error: true
+            };
         default:
             return state
     }
